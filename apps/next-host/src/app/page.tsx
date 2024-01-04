@@ -1,7 +1,8 @@
 'use client';
 
 // import dynamic from 'next/dynamic';
-import NxWelcome from './nx-welcome';
+import NxWelcome from '../components/nx-welcome';
+import BuyButton from '@nextRemote/src/components/buy-button';
 
 // const BuyButton = dynamic(() => import('nextRemote'), {
 //   ssr: false,
@@ -17,7 +18,7 @@ export default async function Index() {
   return (
     <div>
       <NxWelcome title="Next Host" />
-      {/* <BuyButton /> */}
+      <BuyButton />
     </div>
   );
 }
