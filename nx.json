@@ -27,6 +27,10 @@
           "codeCoverage": true
         }
       }
+    },
+    "@nx/vite:test": {
+      "cache": true,
+      "inputs": ["default", "^production"]
     }
   },
   "namedInputs": {
@@ -46,7 +50,18 @@
   "generators": {
     "@nx/react": {
       "application": {
+        "style": "none",
+        "linter": "eslint",
+        "bundler": "webpack",
         "babel": true
+      },
+      "component": {
+        "style": "none"
+      },
+      "library": {
+        "style": "none",
+        "linter": "eslint",
+        "unitTestRunner": "jest"
       }
     },
     "@nx/next": {
