@@ -4,7 +4,11 @@ import { HTMLAttributes } from 'react';
 export interface BuyButtonProps extends HTMLAttributes<HTMLButtonElement> {}
 
 export function BuyButton({ children, ...props }: BuyButtonProps) {
-  return <button {...props}>{children || `Buy now! from Next Remote`}</button>;
+  return (
+    <button {...props} onClick={() => window.alert('alert from next-remote')}>
+      {children || `Button`}
+    </button>
+  );
 }
 
 export default BuyButton;
