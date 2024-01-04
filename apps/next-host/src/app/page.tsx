@@ -2,6 +2,7 @@
 
 // import dynamic from 'next/dynamic';
 import NxWelcome from '../components/nx-welcome';
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import BuyButton from '@nextRemote/src/components/buy-button';
 
 // const BuyButton = dynamic(() => import('nextRemote'), {
