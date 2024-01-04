@@ -1,5 +1,5 @@
-import BuyButton from './components/buy-button';
-import NxWelcome from './components/nx-welcome';
+import BuyButton from '../components/buy-button';
+import NxWelcome from '../components/nx-welcome';
 
 export default async function Index() {
   /*

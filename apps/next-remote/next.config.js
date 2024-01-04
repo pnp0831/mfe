@@ -1,3 +1,4 @@
+const deps = require('../../package.json').dependencies;
 const { composePlugins, withNx } = require('@nx/next');
 const { NextFederationPlugin } = require('@module-federation/nextjs-mf');
 
@@ -23,7 +24,7 @@ const nextConfig = {
     ignoreDuringBuilds: false,
   },
   env: {
-    NEXT_PRIVATE_LOCAL_WEBPACK: 'true',
+    // NEXT_PRIVATE_LOCAL_WEBPACK: 'true',
   },
   /**
    *
@@ -39,10 +40,13 @@ const nextConfig = {
           name: 'nextRemote',
           filename: 'static/chunks/remoteEntry.js',
           exposes: {
-            './buy-button': './src/app/components/buy-button',
-            './useCount': './src/app/hooks/useCount.ts',
+            './buy-button': './src/components/buy-button',
+            './useCount': './src/hooks/useCount.ts',
           },
-          shared: ['react', 'react-dom'],
+          extraOptions: {
+            automaticAsyncBoundary: true,
+          },
+          shared: ['react', 'react-dom', 'next'],
         })
       );
     }

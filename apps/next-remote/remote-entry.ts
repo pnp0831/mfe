@@ -1,1 +1,1 @@
-export { default } from './src/app/components/buy-button';
+export { default } from './src/components/buy-button';

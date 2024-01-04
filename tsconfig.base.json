@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "nextRemote": ["apps/next-remote/remote-entry.ts"]
+      "nextRemote": ["apps/next-remote"]
     }
   },
   "exclude": ["node_modules", "tmp"]
