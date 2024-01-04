@@ -1,11 +1,11 @@
 'use client';
 
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 import NxWelcome from './nx-welcome';
 
-const BuyButton = dynamic(() => import('nextRemote'), {
-  ssr: false,
-});
+// const BuyButton = dynamic(() => import('nextRemote'), {
+//   ssr: false,
+// });
 
 export default async function Index() {
   // const { count } = useCount();
@@ -17,7 +17,7 @@ export default async function Index() {
   return (
     <div>
       <NxWelcome title="Next Host" />
-      <BuyButton />
+      {/* <BuyButton /> */}
     </div>
   );
 }
