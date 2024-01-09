@@ -1,0 +1,30 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../dist/out-tsc",
+    "types": [
+      "node",
+      "@nx/react/typings/cssmodule.d.ts",
+      "@nx/react/typings/image.d.ts",
+      "next",
+      "@nx/next/typings/image.d.ts"
+    ]
+  },
+  "exclude": [
+    "jest.config.ts",
+    "ui-kit/**/*.spec.ts",
+    "ui-kit/**/*.test.ts",
+    "ui-kit/**/*.spec.tsx",
+    "ui-kit/**/*.test.tsx",
+    "ui-kit/**/*.spec.js",
+    "ui-kit/**/*.test.js",
+    "ui-kit/**/*.spec.jsx",
+    "ui-kit/**/*.test.jsx"
+  ],
+  "include": [
+    "ui-kit/**/*.js",
+    "ui-kit/**/*.jsx",
+    "ui-kit/**/*.ts",
+    "ui-kit/**/*.tsx"
+  ]
+}

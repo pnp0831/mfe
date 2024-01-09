@@ -2,10 +2,11 @@ const { composePlugins, withNx } = require('@nx/next');
 const { NextFederationPlugin } = require('@module-federation/nextjs-mf');
 
 const remotes = (isServer) => {
-  const location = isServer ? 'ssr' : 'chunks';
+  const location = 'chunks';
 
   return {
-    // nextRemote: `nextRemote@${process.env.NEXT_PUBLIC_NEXT_REMOTE_URL}/_next/static/${location}/remoteEntry.js`,
+    'next-remote': `next-remote@${process.env.NEXT_PUBLIC_NEXT_REMOTE_URL}/_next/static/${location}/remoteEntry.js`,
+    'next-host': `next-host@${process.env.NEXT_PUBLIC_NEXT_HOST_URL}/_next/static/${location}/remoteEntry.js`,
   };
 };
 
@@ -22,6 +23,7 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  experimental: { appDir: true },
   reactStrictMode: false,
   poweredByHeader: false,
   typescript: {
@@ -38,22 +40,27 @@ const nextConfig = {
    * @param {import('webpack').Configuration} config
    * @returns {import('webpack').Configuration}
    */
-  // webpack(config, options) {
-  //   const { isServer } = options;
+  webpack(config, options) {
+    const { isServer } = options;
 
-  //   if (!isServer) {
-  //     config.plugins.push(
-  //       new NextFederationPlugin({
-  //         name: 'host',
-  //         filename: 'static/chunks/remoteEntry.js',
-  //         remotes: remotes(isServer),
-  //         shared: ['react', 'react-dom'],
-  //       })
-  //     );
-  //   }
+    if (!isServer) {
+      config.plugins.push(
+        new NextFederationPlugin({
+          name: 'next-host',
+          filename: 'static/chunks/remoteEntry.js',
+          remotes: remotes(isServer),
+          extraOptions: {
+            debug: true,
+            automaticAsyncBoundary: true,
+          },
+          exposes: {},
+          shared: ['react', 'react-dom', 'next'],
+        })
+      );
+    }
 
-  //   return config;
-  // },
+    return config;
+  },
 };
 
 const plugins = [

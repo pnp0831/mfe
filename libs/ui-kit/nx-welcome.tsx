@@ -1,11 +1,13 @@
-/*
- * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- This is a starter component and can be deleted.
- * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- Delete this file and get started with your project!
- * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- */
-export function NxWelcome({ title }: { title: string }) {
+import React from 'react';
+import { ReactNode } from 'react';
+
+export function NxWelcome({
+  title,
+  children,
+}: {
+  title: string;
+  children?: ReactNode;
+}) {
   return (
     <>
       <style
@@ -116,6 +118,7 @@ export function NxWelcome({ title }: { title: string }) {
               Welcome {title} 👋
             </h1>
           </div>
+          <div>{children}</div>
         </div>
       </div>
     </>

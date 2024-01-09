@@ -26,13 +26,11 @@
     "**/*.tsx",
     "**/*.js",
     "**/*.jsx",
-    "../../apps/host/.next/types/**/*.ts",
-    "../../dist/apps/host/.next/types/**/*.ts",
+    "../../apps/next-host/.next/types/**/*.ts",
+    "../../dist/apps/next-host/.next/types/**/*.ts",
     "next-env.d.ts",
     "./index.d.ts",
-    ".next/types/**/*.ts",
-    "../../types/*.d.ts",
-    "../../dist/apps/next-host/.next/types/**/*.ts"
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",

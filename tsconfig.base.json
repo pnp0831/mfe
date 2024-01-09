@@ -10,13 +10,15 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2021", "dom"],
+    "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nextRemote/*": ["apps/next-remote/*"]
+      "@mfe/libs/*": ["libs/ui-kit/*"],
+      "@next-remote/*": ["apps/next-remote/*"]
     }
   },
+  "include": ["./types/**/*.d.ts"],
   "exclude": ["node_modules", "tmp"]
 }

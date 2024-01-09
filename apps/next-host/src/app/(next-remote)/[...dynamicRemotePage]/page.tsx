@@ -1,4 +1,4 @@
-'use client';
+// 'use client';
 
 // import dynamic from 'next/dynamic';
 
@@ -13,5 +13,5 @@ export default async function Index() {
    *
    * Note: The corresponding styles are in the ./index.scss file.
    */
-  return <div>next remote</div>;
+  return <div>next dynamic</div>;
 }

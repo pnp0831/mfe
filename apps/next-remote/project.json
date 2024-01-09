@@ -9,12 +9,11 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/next-remote"
+        "outputPath": "dist/apps/next-remote",
+        "root": "apps/next-remote"
       },
       "configurations": {
-        "development": {
-          "outputPath": "apps/next-remote"
-        },
+        "development": {},
         "production": {}
       }
     },
@@ -23,14 +22,13 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "next-remote:build",
-        "dev": true,
-        "turbo": true,
-        "port": 4201
+        "dev": true
       },
       "configurations": {
         "development": {
           "buildTarget": "next-remote:build:development",
-          "dev": true
+          "dev": true,
+          "port": 4201
         },
         "production": {
           "buildTarget": "next-remote:build:production",

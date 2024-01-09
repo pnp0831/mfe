@@ -1,7 +1,9 @@
-import BuyButton from '../components/buy-button';
-import NxWelcome from '../components/nx-welcome';
+'use client';
 
-export default async function Index() {
+// import BuyButton from '../components/buy-button';
+import NxWelcome from '@mfe/libs/nx-welcome';
+
+export default function Index() {
   /*
    * Replace the elements below with your own.
    *
@@ -10,7 +12,7 @@ export default async function Index() {
   return (
     <div>
       <NxWelcome title="Next Remote" />
-      <BuyButton />
+      {/* <BuyButton /> */}
     </div>
   );
 }

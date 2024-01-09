@@ -28,9 +28,7 @@
       "configurations": {
         "development": {
           "buildTarget": "next-host:build:development",
-          "dev": true,
-          "turbo": true,
-          "port": 4200
+          "dev": true
         },
         "production": {
           "buildTarget": "next-host:build:production",
