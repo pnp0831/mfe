@@ -1,7 +1,4 @@
-declare module 'next-remote/buy-button' {
-  export * from '@next-remote/src/components/buy-button';
-  export { default } from '@next-remote/src/components/buy-button';
-
+declare module 'next_remote/*' {
   // // const content: any;
   // export const ReactComponent: React.FC<any>;
   // export default ReactComponent;

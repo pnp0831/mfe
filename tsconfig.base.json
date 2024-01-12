@@ -15,8 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@mfe/libs/*": ["libs/ui-kit/*"],
-      "@next-remote/*": ["apps/next-remote/*"]
+      "@mfe/libs/*": ["libs/ui-kit/*"]
     }
   },
   "include": ["./types/**/*.d.ts"],
